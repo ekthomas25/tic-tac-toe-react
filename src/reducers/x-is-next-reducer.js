@@ -1,3 +1,8 @@
 export default (state = true, action) => {
-  return state;
+  switch (action.type) {
+    case 'CHANGE_TURN':
+      return !state;
+    default:
+      return state;
+  }
 }
