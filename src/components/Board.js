@@ -1,6 +1,5 @@
 import React from 'react';
 import Square from './Square';
-import PropTypes from "prop-types";
 
 class Board extends React.Component {
   constructor(props) {
@@ -12,6 +11,7 @@ class Board extends React.Component {
   }
 
   handleClick(i) {
+    //Action needs I && xIsNext || the letter you want to display
     const squares = this.state.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
